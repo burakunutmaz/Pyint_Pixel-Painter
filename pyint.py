@@ -582,8 +582,9 @@ while True:
                                 OpenFile(cPath)
                             elif i == 2:
                                 cPath = FileManager(2)
-                                Capture(screen, cPath + ".png", (4,4), (764,760))
-                                fileName = cPath.split("/")[-1] + ".png"
+                                if cPath:
+                                   Capture(screen, cPath + ".png", (4,4), (764,760))
+                                   fileName = cPath.split("/")[-1] + ".png"
 
                     for but in B_Buttons:
                         if but.rollOver:
@@ -705,8 +706,3 @@ while True:
 
 
     pg.display.update()
-
-
-
-
-
